@@ -28,14 +28,25 @@ function calculate() {
   }
 
   const unitTotal = product + material + layer + effect + printSide;
-  const total = unitTotal * qty;
+  const subTotal = unitTotal * qty;
 
+  // GST Calculation
+  const sgst = subTotal * 0.09;
+  const cgst = subTotal * 0.09;
+  const finalTotal = subTotal + sgst + cgst;
+
+  // Breakdown UI
   document.getElementById("basePrice").innerText = formatPrice(product);
   document.getElementById("materialPrice").innerText = formatPrice(material);
   document.getElementById("layerPrice").innerText = formatPrice(layer);
   document.getElementById("effectPrice").innerText = formatPrice(effect);
   document.getElementById("sidePrice").innerText = formatPrice(printSide);
-  document.getElementById("price").innerText = formatPrice(total);
+
+  // GST UI
+  document.getElementById("subTotal").innerText = formatPrice(subTotal);
+  document.getElementById("sgst").innerText = formatPrice(Math.round(sgst));
+  document.getElementById("cgst").innerText = formatPrice(Math.round(cgst));
+  document.getElementById("finalTotal").innerText = formatPrice(Math.round(finalTotal));
 }
 
 function setMinimumDeliveryDate() {
