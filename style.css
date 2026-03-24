@@ -3,8 +3,7 @@
   --white: #ffffff;
   --text: #111111;
   --muted: #6b7280;
-  --border: #d9dce2;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --border: #e5e7eb;
 
   --brand-red: #ef1c25;
   --brand-blue: #168fcd;
@@ -19,101 +18,104 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+
   background:
     radial-gradient(circle at 10% 20%, rgba(239, 28, 37, 0.05), transparent 25%),
     radial-gradient(circle at 90% 10%, rgba(22, 143, 205, 0.05), transparent 25%),
     radial-gradient(circle at 50% 100%, rgba(243, 165, 26, 0.04), transparent 30%),
     linear-gradient(180deg, #fafafa 0%, #f3f4f6 100%);
-  color: #111111;
+
+  color: var(--text);
 }
 
+/* HERO */
+
 .hero {
-  position: relative;
-  padding: 56px 20px 28px;
+  padding: 60px 20px 20px;
 }
 
 .hero-content {
-  max-width: 1180px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 28px;
+  grid-template-columns: 150px 1fr;
+  gap: 30px;
   align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(14px);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
+
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  padding: 30px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
-  width: 140px;
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.eyebrow {
-  margin: 0 0 10px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--brand-deep-blue);
+  width: 130px;
 }
 
 .hero-text h1 {
   margin: 0;
   font-size: 44px;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
   font-weight: 800;
+  letter-spacing: -0.03em;
+
+  background: linear-gradient(90deg, var(--brand-red), var(--brand-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtext {
-  margin: 14px 0 0;
-  max-width: 700px;
-  font-size: 16px;
-  line-height: 1.8;
+  margin-top: 12px;
   color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
+/* FORM */
+
 .form-section {
-  padding: 20px 20px 64px;
+  padding: 20px 20px 60px;
 }
 
 .form-card {
-  max-width: 1180px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 30px;
+  max-width: 1100px;
+  margin: auto;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
   padding: 40px;
+
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0,0,0,0.04);
-  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
 }
 
+/* HEADER */
+
 .form-header {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .form-header h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
-  letter-spacing: -0.02em;
 }
 
 .form-header p {
-  margin: 8px 0 0;
+  margin-top: 6px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 }
+
+/* GRID */
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
@@ -126,98 +128,113 @@ body {
   grid-column: 1 / -1;
 }
 
+/* LABEL */
+
 label {
   font-size: 13px;
-  letter-spacing: 0.02em;
+  margin-bottom: 6px;
   color: #444;
+  font-weight: 600;
 }
+
+/* INPUTS */
 
 input,
 select,
 textarea {
   border-radius: 14px;
-  padding: 16px;
-  font-size: 15px;
-  border: 1px solid #e5e7eb;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  outline: none;
   transition: all 0.25s ease;
 }
 
 input:hover,
 select:hover,
 textarea:hover {
-  border-color: #168fcd;
+  border-color: var(--brand-blue);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #168fcd;
+  border-color: var(--brand-blue);
   box-shadow: 0 0 0 4px rgba(22, 143, 205, 0.12);
 }
 
 textarea {
   resize: vertical;
-  min-height: 120px;
 }
 
+/* FILE INPUT */
+
 input[type="file"] {
-  padding: 12px 14px;
-  background: #fff;
+  padding: 10px;
 }
+
+/* FIELD NOTE */
+
+.field-note {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* PRICE BOX */
 
 .price-box {
   margin-top: 30px;
   background: linear-gradient(135deg, #ffffff, #f9fafb);
   border-radius: 20px;
-  padding: 24px;
-  border: 1px solid rgba(0,0,0,0.06);
+  padding: 22px;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .price-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  font-size: 15px;
-  color: #333;
-}
-
-.price-row strong {
-  font-size: 16px;
+  padding: 6px 0;
+  font-size: 14px;
 }
 
 .total-row {
   margin-top: 12px;
-  padding-top: 16px;
+  padding-top: 14px;
   border-top: 1px dashed rgba(0,0,0,0.1);
 }
 
 .total-row strong {
-  font-size: 26px;
-  color: #111;
+  font-size: 24px;
+  font-weight: 800;
 }
+
+/* BUTTON */
 
 .pay-btn {
   width: 100%;
-  margin-top: 28px;
+  margin-top: 25px;
   padding: 18px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
+
   border-radius: 16px;
   border: none;
-  color: white;
   cursor: pointer;
 
-  background: linear-gradient(90deg, #ef1c25, #168fcd);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: linear-gradient(90deg, var(--brand-red), var(--brand-blue));
+  color: white;
 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   transition: all 0.25s ease;
 }
 
 .pay-btn:hover {
-  transform: translateY(-2px) scale(1.01);
+  transform: translateY(-2px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.2);
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .hero-content {
@@ -226,42 +243,14 @@ input[type="file"] {
   }
 
   .logo {
-    margin: 0 auto;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
+    margin: auto;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
   }
 
-  .form-card {
-    padding: 24px;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero {
-    padding: 28px 14px 12px;
-  }
-
-  .form-section {
-    padding: 12px 14px 36px;
-  }
-
-  .hero-content,
-  .form-card {
-    border-radius: 22px;
-  }
-
   .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .total-row span,
-  .total-row strong {
-    font-size: 20px;
+    font-size: 32px;
   }
 }
