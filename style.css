@@ -20,10 +20,11 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(243, 165, 26, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(22, 143, 205, 0.10), transparent 24%),
+    radial-gradient(circle at 10% 20%, rgba(239, 28, 37, 0.05), transparent 25%),
+    radial-gradient(circle at 90% 10%, rgba(22, 143, 205, 0.05), transparent 25%),
+    radial-gradient(circle at 50% 100%, rgba(243, 165, 26, 0.04), transparent 30%),
     linear-gradient(180deg, #fafafa 0%, #f3f4f6 100%);
-  color: var(--text);
+  color: #111111;
 }
 
 .hero {
