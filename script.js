@@ -28,3 +28,4 @@ document.getElementById("file").addEventListener("change", function(e){
 function pay() {
   alert("Connect Razorpay here");
 }
+calculate();
