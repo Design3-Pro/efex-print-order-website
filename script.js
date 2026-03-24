@@ -31,9 +31,9 @@ function calculate() {
   const subTotal = unitTotal * qty;
 
   // GST Calculation
-  const sgst = subTotal * 0.09;
-  const cgst = subTotal * 0.09;
-  const finalTotal = subTotal + sgst + cgst;
+const sgst = subTotal * 0.09;
+const cgst = subTotal * 0.09;
+const finalTotal = subTotal + sgst + cgst;
 
   // Breakdown UI
   document.getElementById("basePrice").innerText = formatPrice(product);
@@ -44,9 +44,9 @@ function calculate() {
 
   // GST UI
   document.getElementById("subTotal").innerText = formatPrice(subTotal);
-  document.getElementById("sgst").innerText = formatPrice(Math.round(sgst));
-  document.getElementById("cgst").innerText = formatPrice(Math.round(cgst));
-  document.getElementById("finalTotal").innerText = formatPrice(Math.round(finalTotal));
+document.getElementById("cgst").innerText = formatPrice(Math.round(cgst));
+document.getElementById("sgst").innerText = formatPrice(Math.round(sgst));
+document.getElementById("finalTotal").innerText = formatPrice(Math.round(finalTotal));
 }
 
 function setMinimumDeliveryDate() {
