@@ -86,11 +86,12 @@ body {
 .form-card {
   max-width: 1180px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 30px;
-  box-shadow: var(--shadow);
-  padding: 36px;
+  padding: 40px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+  backdrop-filter: blur(12px);
 }
 
 .form-header {
@@ -126,31 +127,31 @@ body {
 }
 
 label {
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #444;
 }
 
 input,
 select,
 textarea {
-  width: 100%;
-  border: 1px solid var(--border);
-  background: #fff;
-  border-radius: 16px;
-  padding: 15px 16px;
+  border-radius: 14px;
+  padding: 16px;
   font-size: 15px;
-  font-family: inherit;
-  color: var(--text);
-  outline: none;
+  border: 1px solid #e5e7eb;
   transition: all 0.25s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #168fcd;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--brand-blue);
+  border-color: #168fcd;
   box-shadow: 0 0 0 4px rgba(22, 143, 205, 0.12);
 }
 
@@ -165,11 +166,11 @@ input[type="file"] {
 }
 
 .price-box {
-  margin-top: 28px;
-  background: linear-gradient(135deg, rgba(239, 28, 37, 0.05), rgba(22, 143, 205, 0.05));
-  border: 1px solid rgba(22, 143, 205, 0.12);
-  border-radius: 24px;
-  padding: 22px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
 .price-row {
@@ -186,37 +187,36 @@ input[type="file"] {
 }
 
 .total-row {
-  margin-top: 8px;
+  margin-top: 12px;
   padding-top: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px dashed rgba(0,0,0,0.1);
 }
 
-.total-row span,
 .total-row strong {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--text);
+  font-size: 26px;
+  color: #111;
 }
 
 .pay-btn {
   width: 100%;
-  margin-top: 24px;
-  border: none;
-  border-radius: 18px;
-  padding: 17px 20px;
+  margin-top: 28px;
+  padding: 18px;
   font-size: 16px;
   font-weight: 700;
-  font-family: inherit;
-  color: #fff;
+  border-radius: 16px;
+  border: none;
+  color: white;
   cursor: pointer;
-  background: linear-gradient(90deg, var(--brand-red), var(--brand-blue));
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+
+  background: linear-gradient(90deg, #ef1c25, #168fcd);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+  transition: all 0.25s ease;
 }
 
 .pay-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 900px) {
