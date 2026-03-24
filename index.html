@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Print Order Booking</h1>
+
+  <input id="jobName" placeholder="Job Name">
+
+  <select id="product">
+    <option value="150">Wedding Card - ₹150</option>
+    <option value="75">Business Card - ₹75</option>
+  </select>
+
+  <select id="material">
+    <option value="100">300 Art Board - ₹100</option>
+    <option value="150">Texture Board - ₹150</option>
+  </select>
+
+  <select id="layer">
+    <option value="0">Single Layer - ₹0</option>
+    <option value="40">Double Layer - ₹40</option>
+  </select>
+
+  <select id="effect">
+    <option value="0">None - ₹0</option>
+    <option value="50">Foil - ₹50</option>
+  </select>
+
+  <input type="number" id="qty" value="100" min="100">
+
+  <input type="file" id="file">
+
+  <h2 id="price">₹0</h2>
+
+  <button onclick="pay()">Pay & Confirm</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
